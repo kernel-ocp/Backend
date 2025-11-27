@@ -1,6 +1,7 @@
 package com.ocp.ocp_finalproject.trend.domain;
 
 import com.ocp.ocp_finalproject.common.entity.BaseEntity;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -18,10 +19,13 @@ public class SetTrendCategory extends BaseEntity {
     @Id
     private Long trendKeywordId;
 
+    @Column(name = "depth1category")
     private Integer depth1Category;
 
+    @Column(name = "depth2category")
     private Integer depth2Category;
 
+    @Column(name = "depth3category")
     private Integer depth3Category;
 
     @Builder

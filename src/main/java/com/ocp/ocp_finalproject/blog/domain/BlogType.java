@@ -19,10 +19,13 @@ public class BlogType {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "blog_type_id")
     private Long id;
 
+    @Column(name = "blog_type_name")
     private String name;
 
+    @Column(name = "blog_base_url")
     private String baseUrl;
 
     @Builder

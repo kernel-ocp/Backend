@@ -1,6 +1,7 @@
 package com.ocp.ocp_finalproject.trend.domain;
 
 import com.ocp.ocp_finalproject.common.entity.BaseEntity;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -22,14 +23,17 @@ public class TrendCategory extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "trend_category_id")
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "parent_category_id")
     private TrendCategory parentCategory;
 
+    @Column(name = "trend_category_name")
     private String name;
 
+    @Column(name = "depth")
     private Integer depth;
 
     @Builder

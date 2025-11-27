@@ -15,16 +15,20 @@ public class UserBlog extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_blog_id")
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "blog_type_id")
     private BlogType blogType;
 
+    @Column(name = "account_id")
     private String accountId;
 
+    @Column(name = "account_pw")
     private String accountPassword;
 
+    @Column(name = "blog_url")
     private String blogUrl;
 
     @Builder
