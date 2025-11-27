@@ -28,7 +28,6 @@ public class SetTrendCategory extends BaseEntity {
     @Column(name = "depth3category")
     private Integer depth3Category;
 
-
     @Builder(builderMethodName = "createBuilder")
     public static SetTrendCategory create(Long trendKeywordId, Integer depth1Category, Integer depth2Category, Integer depth3Category) {
         SetTrendCategory setTrendCategory = new SetTrendCategory();
@@ -37,7 +36,6 @@ public class SetTrendCategory extends BaseEntity {
         setTrendCategory.depth2Category = depth2Category;
         setTrendCategory.depth3Category = depth3Category;
         return setTrendCategory;
-
     }
 
     public void updateDepths(Integer depth1Category, Integer depth2Category, Integer depth3Category) {
