@@ -6,10 +6,7 @@ import com.ocp.ocp_finalproject.notice.dto.response.NoticeResponse;
 import com.ocp.ocp_finalproject.notice.service.NoticeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
@@ -24,6 +21,16 @@ public class NoticeAdminController {
     @PostMapping
     public ResponseEntity<ApiResult<NoticeResponse>> createNotice(@RequestBody NoticeCreateRequest request) {
         return ResponseEntity.ok(ApiResult.success("공지사항 등록 성공", noticeService.createNotice(request))
+        );
+    }
+
+    /**
+     * 공지사항 삭제
+     */
+    @DeleteMapping("/{noticeId}")
+    public ResponseEntity<ApiResult<Void>> deleteNotice(@PathVariable Long noticeId) {
+        noticeService.deleteNotice(noticeId);
+        return ResponseEntity.ok(ApiResult.success("공지사항 삭제 성공", null)
         );
     }
 }
