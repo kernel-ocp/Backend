@@ -70,4 +70,26 @@ public class Work extends BaseEntity {
         this.completedAt = completedAt;
     }
 
+    public void markRequested() {
+        this.status = WorkExecutionStatus.REQUESTED;
+    }
+
+    public void updateProductSelection(boolean isSuccess, LocalDateTime completedAt) {
+        if (isSuccess) {
+            this.status = WorkExecutionStatus.PRODUCT_SELECTED;
+        } else {
+            this.status = WorkExecutionStatus.FAILED;
+        }
+        this.completedAt = completedAt;
+    }
+
+    public void updateContentGeneration(boolean isSuccess, LocalDateTime completedAt) {
+        if (isSuccess) {
+            this.status = WorkExecutionStatus.CONTENT_GENERATED;
+        } else {
+            this.status = WorkExecutionStatus.FAILED;
+        }
+        this.completedAt = completedAt;
+    }
+
 }
