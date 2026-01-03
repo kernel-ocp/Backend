@@ -42,3 +42,17 @@ out/
 
 # Docker Compose override (개인 설정)
 docker-compose.override.yml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+env/
+
+# Airflow
+airflow/logs/
+blog_upload_module/logs/
