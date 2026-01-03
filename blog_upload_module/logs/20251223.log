@@ -1,0 +1,667 @@
+2025-12-23 10:26:50 - INFO - 네이버 블로그 업로드 시작
+2025-12-23 10:26:50 - INFO - 네이버 블로그 자동화 시작
+2025-12-23 10:26:50 - INFO - Chrome 드라이버 초기화 (headless=False)
+2025-12-23 10:27:00 - INFO - 네이버 로그인 시작
+2025-12-23 10:27:00 - INFO - 블로그 ID 추출: joo_0517
+2025-12-23 10:27:08 - INFO - 네이버 로그인 완료
+2025-12-23 10:27:08 - INFO - onlineviewer HTML 변환 시작
+2025-12-23 10:27:20 - INFO - 리치 HTML 클립보드 복사 완료
+2025-12-23 10:27:30 - INFO - 테스트 모드 - 네이버 발행 단계 생략
+2025-12-23 10:27:32 - INFO - 네이버 블로그 업로드 완료
+2025-12-23 10:27:32 - ERROR - 웹훅 전송 실패(URL Error): <urlopen error [Errno 61] Connection refused>
+2025-12-23 12:12:01 - INFO - 네이버 블로그 업로드 시작
+2025-12-23 12:12:01 - INFO - 네이버 블로그 자동화 시작
+2025-12-23 12:12:01 - INFO - Chrome 드라이버 초기화 (headless=False)
+2025-12-23 12:12:03 - INFO - 네이버 로그인 시작
+2025-12-23 12:12:03 - INFO - 블로그 ID 추출: kjjk
+2025-12-23 12:12:11 - INFO - 네이버 로그인 완료
+2025-12-23 12:12:11 - INFO - onlineviewer HTML 변환 시작
+2025-12-23 12:12:18 - ERROR - 네이버 글 작성 실패: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.170)
+Stacktrace:
+0   chromedriver                        0x000000010477cb2c cxxbridge1$str$ptr + 3033596
+1   chromedriver                        0x0000000104774b30 cxxbridge1$str$ptr + 3000832
+2   chromedriver                        0x000000010426eb0c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74196
+3   chromedriver                        0x00000001042488bc chromedriver + 149692
+4   chromedriver                        0x00000001042dda78 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 528704
+5   chromedriver                        0x00000001042f64cc _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 629652
+6   chromedriver                        0x00000001042aa16c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 317492
+7   chromedriver                        0x0000000104740098 cxxbridge1$str$ptr + 2785128
+8   chromedriver                        0x0000000104743804 cxxbridge1$str$ptr + 2799316
+9   chromedriver                        0x0000000104720850 cxxbridge1$str$ptr + 2656032
+10  chromedriver                        0x0000000104744074 cxxbridge1$str$ptr + 2801476
+11  chromedriver                        0x00000001047111cc cxxbridge1$str$ptr + 2592924
+12  chromedriver                        0x0000000104763cb4 cxxbridge1$str$ptr + 2931588
+13  chromedriver                        0x0000000104763e34 cxxbridge1$str$ptr + 2931972
+14  chromedriver                        0x0000000104774788 cxxbridge1$str$ptr + 2999896
+15  libsystem_pthread.dylib             0x000000019a0f3c0c _pthread_start + 136
+16  libsystem_pthread.dylib             0x000000019a0eeb80 thread_start + 8
+
+2025-12-23 12:12:18 - WARNING - 디버깅 파일 저장 실패: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.170)
+Stacktrace:
+0   chromedriver                        0x000000010477cb2c cxxbridge1$str$ptr + 3033596
+1   chromedriver                        0x0000000104774b30 cxxbridge1$str$ptr + 3000832
+2   chromedriver                        0x000000010426eb0c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74196
+3   chromedriver                        0x00000001042488bc chromedriver + 149692
+4   chromedriver                        0x00000001042dda78 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 528704
+5   chromedriver                        0x00000001042f64cc _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 629652
+6   chromedriver                        0x00000001042aa16c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 317492
+7   chromedriver                        0x0000000104740098 cxxbridge1$str$ptr + 2785128
+8   chromedriver                        0x0000000104743804 cxxbridge1$str$ptr + 2799316
+9   chromedriver                        0x0000000104720850 cxxbridge1$str$ptr + 2656032
+10  chromedriver                        0x0000000104744074 cxxbridge1$str$ptr + 2801476
+11  chromedriver                        0x00000001047111cc cxxbridge1$str$ptr + 2592924
+12  chromedriver                        0x0000000104763cb4 cxxbridge1$str$ptr + 2931588
+13  chromedriver                        0x0000000104763e34 cxxbridge1$str$ptr + 2931972
+14  chromedriver                        0x0000000104774788 cxxbridge1$str$ptr + 2999896
+15  libsystem_pthread.dylib             0x000000019a0f3c0c _pthread_start + 136
+16  libsystem_pthread.dylib             0x000000019a0eeb80 thread_start + 8
+
+2025-12-23 12:12:18 - ERROR - 네이버 블로그 업로드 실패
+2025-12-23 12:12:18 - INFO - 웹훅 전송 성공 (status=200)
+2025-12-23 12:17:34 - INFO - 네이버 블로그 업로드 시작
+2025-12-23 12:17:34 - INFO - 네이버 블로그 자동화 시작
+2025-12-23 12:17:34 - INFO - Chrome 드라이버 초기화 (headless=False)
+2025-12-23 12:17:36 - INFO - 네이버 로그인 시작
+2025-12-23 12:17:36 - INFO - 블로그 ID 추출: joo_0517
+2025-12-23 12:17:44 - INFO - 네이버 로그인 완료
+2025-12-23 12:17:44 - INFO - onlineviewer HTML 변환 시작
+2025-12-23 12:17:56 - INFO - 리치 HTML 클립보드 복사 완료
+2025-12-23 12:18:01 - ERROR - 네이버 글 작성 실패: Message: element click intercepted: Element <div draggable="false" class="se-section se-section-documentTitle se-l-default se-section-align-left">...</div> is not clickable at point (590, 252). Other element would receive the click: <div class="se-popup-dim se-popup-dim-white"></div>
+  (Session info: chrome=143.0.7499.170); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+0   chromedriver                        0x0000000105164b2c cxxbridge1$str$ptr + 3033596
+1   chromedriver                        0x000000010515cb30 cxxbridge1$str$ptr + 3000832
+2   chromedriver                        0x0000000104c56b0c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74196
+3   chromedriver                        0x0000000104ca343c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 387844
+4   chromedriver                        0x0000000104ca1a1c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 381156
+5   chromedriver                        0x0000000104c9f88c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 372564
+6   chromedriver                        0x0000000104c9ec9c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 369508
+7   chromedriver                        0x0000000104c93ca4 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 324460
+8   chromedriver                        0x0000000104c93748 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 323088
+9   chromedriver                        0x0000000104cde968 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 630832
+10  chromedriver                        0x0000000104c9216c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 317492
+11  chromedriver                        0x0000000105128098 cxxbridge1$str$ptr + 2785128
+12  chromedriver                        0x000000010512b804 cxxbridge1$str$ptr + 2799316
+13  chromedriver                        0x0000000105108850 cxxbridge1$str$ptr + 2656032
+14  chromedriver                        0x000000010512c074 cxxbridge1$str$ptr + 2801476
+15  chromedriver                        0x00000001050f91cc cxxbridge1$str$ptr + 2592924
+16  chromedriver                        0x000000010514bcb4 cxxbridge1$str$ptr + 2931588
+17  chromedriver                        0x000000010514be34 cxxbridge1$str$ptr + 2931972
+18  chromedriver                        0x000000010515c788 cxxbridge1$str$ptr + 2999896
+19  libsystem_pthread.dylib             0x000000019a0f3c0c _pthread_start + 136
+20  libsystem_pthread.dylib             0x000000019a0eeb80 thread_start + 8
+
+2025-12-23 12:18:01 - INFO - 디버깅용 HTML/스크린샷 저장 완료
+2025-12-23 12:18:01 - ERROR - 네이버 블로그 업로드 실패
+2025-12-23 12:18:01 - INFO - 웹훅 전송 성공 (status=200)
+2025-12-23 13:32:10 - INFO - 티스토리 블로그 업로드 시작
+2025-12-23 13:32:10 - INFO - 티스토리 블로그 자동화 시작
+2025-12-23 13:32:10 - INFO - Chrome 드라이버 초기화 (headless=False)
+2025-12-23 13:32:12 - INFO - 티스토리(카카오) 로그인 시작
+2025-12-23 13:32:28 - INFO - 티스토리 글쓰기 페이지 이동: https://story13923.tistory.com/manage/newpost/
+2025-12-23 13:32:31 - INFO - 편집기 confirm 자동 수락 활성화(main=True, iframe=True)
+2025-12-23 13:32:33 - INFO - 편집기 confirm 자동 수락 활성화(main=True, iframe=True)
+2025-12-23 13:32:33 - INFO - 편집기 confirm 자동 수락 활성화(main=True, iframe=True)
+2025-12-23 13:32:46 - INFO - HTML 모드 본문 입력 시도!
+2025-12-23 13:33:06 - WARNING - HTML 본문이 기대 길이만큼 적용되지 않았습니다.
+2025-12-23 13:33:07 - ERROR - 티스토리 글쓰기 중 에러 발생: HTML 본문 검증 실패: 내용 불일치
+2025-12-23 13:33:07 - ERROR - 티스토리 블로그 업로드 실패
+2025-12-23 13:33:07 - INFO - 웹훅 전송 성공 (status=200)
+2025-12-23 13:37:24 - INFO - 네이버 블로그 업로드 시작
+2025-12-23 13:37:24 - INFO - 네이버 블로그 자동화 시작
+2025-12-23 13:37:24 - INFO - Chrome 드라이버 초기화 (headless=False)
+2025-12-23 13:37:25 - INFO - 네이버 로그인 시작
+2025-12-23 13:37:25 - INFO - 블로그 ID 추출: joo_0517
+2025-12-23 13:37:34 - INFO - 네이버 로그인 완료
+2025-12-23 13:37:34 - INFO - onlineviewer HTML 변환 시작
+2025-12-23 13:37:46 - INFO - 리치 HTML 클립보드 복사 완료
+2025-12-23 13:37:52 - ERROR - 네이버 글 작성 실패: Message: element click intercepted: Element <div draggable="false" class="se-section se-section-documentTitle se-l-default se-section-align-left">...</div> is not clickable at point (590, 252). Other element would receive the click: <div class="se-popup-dim se-popup-dim-white"></div>
+  (Session info: chrome=143.0.7499.170); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+0   chromedriver                        0x00000001031dcb2c cxxbridge1$str$ptr + 3033596
+1   chromedriver                        0x00000001031d4b30 cxxbridge1$str$ptr + 3000832
+2   chromedriver                        0x0000000102cceb0c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74196
+3   chromedriver                        0x0000000102d1b43c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 387844
+4   chromedriver                        0x0000000102d19a1c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 381156
+5   chromedriver                        0x0000000102d1788c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 372564
+6   chromedriver                        0x0000000102d16c9c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 369508
+7   chromedriver                        0x0000000102d0bca4 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 324460
+8   chromedriver                        0x0000000102d0b748 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 323088
+9   chromedriver                        0x0000000102d56968 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 630832
+10  chromedriver                        0x0000000102d0a16c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 317492
+11  chromedriver                        0x00000001031a0098 cxxbridge1$str$ptr + 2785128
+12  chromedriver                        0x00000001031a3804 cxxbridge1$str$ptr + 2799316
+13  chromedriver                        0x0000000103180850 cxxbridge1$str$ptr + 2656032
+14  chromedriver                        0x00000001031a4074 cxxbridge1$str$ptr + 2801476
+15  chromedriver                        0x00000001031711cc cxxbridge1$str$ptr + 2592924
+16  chromedriver                        0x00000001031c3cb4 cxxbridge1$str$ptr + 2931588
+17  chromedriver                        0x00000001031c3e34 cxxbridge1$str$ptr + 2931972
+18  chromedriver                        0x00000001031d4788 cxxbridge1$str$ptr + 2999896
+19  libsystem_pthread.dylib             0x000000019a0f3c0c _pthread_start + 136
+20  libsystem_pthread.dylib             0x000000019a0eeb80 thread_start + 8
+
+2025-12-23 13:37:52 - INFO - 디버깅용 HTML/스크린샷 저장 완료
+2025-12-23 13:37:52 - ERROR - 네이버 블로그 업로드 실패
+2025-12-23 13:37:52 - INFO - 웹훅 전송 성공 (status=200)
+2025-12-23 13:58:20 - INFO - 네이버 블로그 업로드 시작
+2025-12-23 13:58:20 - INFO - 네이버 블로그 자동화 시작
+2025-12-23 13:58:20 - INFO - Chrome 드라이버 초기화 (headless=False)
+2025-12-23 13:58:22 - INFO - 네이버 로그인 시작
+2025-12-23 13:58:22 - INFO - 블로그 ID 추출: joo_0517
+2025-12-23 13:58:30 - INFO - 네이버 로그인 완료
+2025-12-23 13:58:30 - INFO - onlineviewer HTML 변환 시작
+2025-12-23 13:58:43 - INFO - 리치 HTML 클립보드 복사 완료
+2025-12-23 13:58:48 - ERROR - 네이버 글 작성 실패: Message: element click intercepted: Element <div draggable="false" class="se-section se-section-documentTitle se-l-default se-section-align-left">...</div> is not clickable at point (590, 252). Other element would receive the click: <div class="se-popup-dim se-popup-dim-white"></div>
+  (Session info: chrome=143.0.7499.170); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+0   chromedriver                        0x0000000104734b2c cxxbridge1$str$ptr + 3033596
+1   chromedriver                        0x000000010472cb30 cxxbridge1$str$ptr + 3000832
+2   chromedriver                        0x0000000104226b0c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74196
+3   chromedriver                        0x000000010427343c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 387844
+4   chromedriver                        0x0000000104271a1c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 381156
+5   chromedriver                        0x000000010426f88c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 372564
+6   chromedriver                        0x000000010426ec9c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 369508
+7   chromedriver                        0x0000000104263ca4 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 324460
+8   chromedriver                        0x0000000104263748 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 323088
+9   chromedriver                        0x00000001042ae968 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 630832
+10  chromedriver                        0x000000010426216c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 317492
+11  chromedriver                        0x00000001046f8098 cxxbridge1$str$ptr + 2785128
+12  chromedriver                        0x00000001046fb804 cxxbridge1$str$ptr + 2799316
+13  chromedriver                        0x00000001046d8850 cxxbridge1$str$ptr + 2656032
+14  chromedriver                        0x00000001046fc074 cxxbridge1$str$ptr + 2801476
+15  chromedriver                        0x00000001046c91cc cxxbridge1$str$ptr + 2592924
+16  chromedriver                        0x000000010471bcb4 cxxbridge1$str$ptr + 2931588
+17  chromedriver                        0x000000010471be34 cxxbridge1$str$ptr + 2931972
+18  chromedriver                        0x000000010472c788 cxxbridge1$str$ptr + 2999896
+19  libsystem_pthread.dylib             0x000000019a0f3c0c _pthread_start + 136
+20  libsystem_pthread.dylib             0x000000019a0eeb80 thread_start + 8
+
+2025-12-23 13:58:48 - INFO - 디버깅용 HTML/스크린샷 저장 완료
+2025-12-23 13:58:48 - ERROR - 네이버 블로그 업로드 실패
+2025-12-23 13:58:49 - INFO - 웹훅 전송 성공 (status=200)
+2025-12-23 14:08:30 - INFO - 네이버 블로그 업로드 시작
+2025-12-23 14:08:30 - INFO - 네이버 블로그 자동화 시작
+2025-12-23 14:08:30 - INFO - Chrome 드라이버 초기화 (headless=False)
+2025-12-23 14:08:32 - INFO - 네이버 로그인 시작
+2025-12-23 14:08:32 - INFO - 블로그 ID 추출: joo_0517
+2025-12-23 14:08:40 - INFO - 네이버 로그인 완료
+2025-12-23 14:08:40 - INFO - onlineviewer HTML 변환 시작
+2025-12-23 14:08:52 - INFO - 리치 HTML 클립보드 복사 완료
+2025-12-23 14:08:57 - ERROR - 네이버 글 작성 실패: Message: element click intercepted: Element <div draggable="false" class="se-section se-section-documentTitle se-l-default se-section-align-left">...</div> is not clickable at point (590, 252). Other element would receive the click: <div class="se-popup-dim se-popup-dim-white"></div>
+  (Session info: chrome=143.0.7499.170); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+0   chromedriver                        0x0000000100fd4b2c cxxbridge1$str$ptr + 3033596
+1   chromedriver                        0x0000000100fccb30 cxxbridge1$str$ptr + 3000832
+2   chromedriver                        0x0000000100ac6b0c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74196
+3   chromedriver                        0x0000000100b1343c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 387844
+4   chromedriver                        0x0000000100b11a1c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 381156
+5   chromedriver                        0x0000000100b0f88c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 372564
+6   chromedriver                        0x0000000100b0ec9c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 369508
+7   chromedriver                        0x0000000100b03ca4 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 324460
+8   chromedriver                        0x0000000100b03748 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 323088
+9   chromedriver                        0x0000000100b4e968 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 630832
+10  chromedriver                        0x0000000100b0216c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 317492
+11  chromedriver                        0x0000000100f98098 cxxbridge1$str$ptr + 2785128
+12  chromedriver                        0x0000000100f9b804 cxxbridge1$str$ptr + 2799316
+13  chromedriver                        0x0000000100f78850 cxxbridge1$str$ptr + 2656032
+14  chromedriver                        0x0000000100f9c074 cxxbridge1$str$ptr + 2801476
+15  chromedriver                        0x0000000100f691cc cxxbridge1$str$ptr + 2592924
+16  chromedriver                        0x0000000100fbbcb4 cxxbridge1$str$ptr + 2931588
+17  chromedriver                        0x0000000100fbbe34 cxxbridge1$str$ptr + 2931972
+18  chromedriver                        0x0000000100fcc788 cxxbridge1$str$ptr + 2999896
+19  libsystem_pthread.dylib             0x000000019a0f3c0c _pthread_start + 136
+20  libsystem_pthread.dylib             0x000000019a0eeb80 thread_start + 8
+
+2025-12-23 14:08:57 - INFO - 디버깅용 HTML/스크린샷 저장 완료
+2025-12-23 14:08:57 - ERROR - 네이버 블로그 업로드 실패
+2025-12-23 14:08:57 - INFO - 웹훅 전송 성공 (status=200)
+2025-12-23 14:14:17 - INFO - 네이버 블로그 업로드 시작
+2025-12-23 14:14:17 - INFO - 네이버 블로그 자동화 시작
+2025-12-23 14:14:17 - INFO - Chrome 드라이버 초기화 (headless=False)
+2025-12-23 14:14:19 - INFO - 네이버 로그인 시작
+2025-12-23 14:14:19 - INFO - 블로그 ID 추출: joo_0517
+2025-12-23 14:14:27 - INFO - 네이버 로그인 완료
+2025-12-23 14:14:27 - INFO - onlineviewer HTML 변환 시작
+2025-12-23 14:14:38 - INFO - 리치 HTML 클립보드 복사 완료
+2025-12-23 14:14:44 - ERROR - 네이버 글 작성 실패: Message: element click intercepted: Element <div draggable="false" class="se-section se-section-documentTitle se-l-default se-section-align-left">...</div> is not clickable at point (590, 252). Other element would receive the click: <div class="se-popup-dim se-popup-dim-white"></div>
+  (Session info: chrome=143.0.7499.170); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+0   chromedriver                        0x0000000102f38b2c cxxbridge1$str$ptr + 3033596
+1   chromedriver                        0x0000000102f30b30 cxxbridge1$str$ptr + 3000832
+2   chromedriver                        0x0000000102a2ab0c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74196
+3   chromedriver                        0x0000000102a7743c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 387844
+4   chromedriver                        0x0000000102a75a1c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 381156
+5   chromedriver                        0x0000000102a7388c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 372564
+6   chromedriver                        0x0000000102a72c9c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 369508
+7   chromedriver                        0x0000000102a67ca4 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 324460
+8   chromedriver                        0x0000000102a67748 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 323088
+9   chromedriver                        0x0000000102ab2968 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 630832
+10  chromedriver                        0x0000000102a6616c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 317492
+11  chromedriver                        0x0000000102efc098 cxxbridge1$str$ptr + 2785128
+12  chromedriver                        0x0000000102eff804 cxxbridge1$str$ptr + 2799316
+13  chromedriver                        0x0000000102edc850 cxxbridge1$str$ptr + 2656032
+14  chromedriver                        0x0000000102f00074 cxxbridge1$str$ptr + 2801476
+15  chromedriver                        0x0000000102ecd1cc cxxbridge1$str$ptr + 2592924
+16  chromedriver                        0x0000000102f1fcb4 cxxbridge1$str$ptr + 2931588
+17  chromedriver                        0x0000000102f1fe34 cxxbridge1$str$ptr + 2931972
+18  chromedriver                        0x0000000102f30788 cxxbridge1$str$ptr + 2999896
+19  libsystem_pthread.dylib             0x000000019a0f3c0c _pthread_start + 136
+20  libsystem_pthread.dylib             0x000000019a0eeb80 thread_start + 8
+
+2025-12-23 14:14:44 - INFO - 디버깅용 HTML/스크린샷 저장 완료
+2025-12-23 14:14:44 - ERROR - 네이버 블로그 업로드 실패
+2025-12-23 14:14:44 - INFO - 웹훅 전송 성공 (status=200)
+2025-12-23 14:26:31 - INFO - 네이버 블로그 업로드 시작
+2025-12-23 14:26:31 - INFO - 네이버 블로그 자동화 시작
+2025-12-23 14:26:31 - INFO - Chrome 드라이버 초기화 (headless=False)
+2025-12-23 14:26:33 - INFO - 네이버 로그인 시작
+2025-12-23 14:26:33 - INFO - 블로그 ID 추출: joo_0517
+2025-12-23 14:26:41 - INFO - 네이버 로그인 완료
+2025-12-23 14:26:41 - INFO - onlineviewer HTML 변환 시작
+2025-12-23 14:26:53 - INFO - 리치 HTML 클립보드 복사 완료
+2025-12-23 14:26:58 - ERROR - 네이버 글 작성 실패: Message: element click intercepted: Element <div draggable="false" class="se-section se-section-documentTitle se-l-default se-section-align-left">...</div> is not clickable at point (590, 252). Other element would receive the click: <div class="se-popup-dim se-popup-dim-white"></div>
+  (Session info: chrome=143.0.7499.170); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+0   chromedriver                        0x0000000102e68b2c cxxbridge1$str$ptr + 3033596
+1   chromedriver                        0x0000000102e60b30 cxxbridge1$str$ptr + 3000832
+2   chromedriver                        0x000000010295ab0c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74196
+3   chromedriver                        0x00000001029a743c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 387844
+4   chromedriver                        0x00000001029a5a1c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 381156
+5   chromedriver                        0x00000001029a388c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 372564
+6   chromedriver                        0x00000001029a2c9c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 369508
+7   chromedriver                        0x0000000102997ca4 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 324460
+8   chromedriver                        0x0000000102997748 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 323088
+9   chromedriver                        0x00000001029e2968 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 630832
+10  chromedriver                        0x000000010299616c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 317492
+11  chromedriver                        0x0000000102e2c098 cxxbridge1$str$ptr + 2785128
+12  chromedriver                        0x0000000102e2f804 cxxbridge1$str$ptr + 2799316
+13  chromedriver                        0x0000000102e0c850 cxxbridge1$str$ptr + 2656032
+14  chromedriver                        0x0000000102e30074 cxxbridge1$str$ptr + 2801476
+15  chromedriver                        0x0000000102dfd1cc cxxbridge1$str$ptr + 2592924
+16  chromedriver                        0x0000000102e4fcb4 cxxbridge1$str$ptr + 2931588
+17  chromedriver                        0x0000000102e4fe34 cxxbridge1$str$ptr + 2931972
+18  chromedriver                        0x0000000102e60788 cxxbridge1$str$ptr + 2999896
+19  libsystem_pthread.dylib             0x000000019a0f3c0c _pthread_start + 136
+20  libsystem_pthread.dylib             0x000000019a0eeb80 thread_start + 8
+
+2025-12-23 14:26:58 - INFO - 디버깅용 HTML/스크린샷 저장 완료
+2025-12-23 14:26:58 - ERROR - 네이버 블로그 업로드 실패
+2025-12-23 14:26:59 - INFO - 웹훅 전송 성공 (status=200)
+2025-12-23 14:32:41 - INFO - 티스토리 블로그 업로드 시작
+2025-12-23 14:32:41 - INFO - 티스토리 블로그 자동화 시작
+2025-12-23 14:32:41 - INFO - Chrome 드라이버 초기화 (headless=False)
+2025-12-23 14:32:42 - INFO - 티스토리(카카오) 로그인 시작
+2025-12-23 14:32:58 - INFO - 티스토리 글쓰기 페이지 이동: https://story13923.tistory.com/manage/newpost/
+2025-12-23 14:33:02 - INFO - [ALERT DETECTED] 2025. 12. 23. 13:32에 저장된 글이 있습니다.
+이어서 작성하시겠습니까?
+2025-12-23 14:33:04 - INFO - 편집기 confirm 자동 수락 활성화(main=True, iframe=True)
+2025-12-23 14:33:05 - INFO - 편집기 confirm 자동 수락 활성화(main=True, iframe=True)
+2025-12-23 14:33:05 - INFO - 편집기 confirm 자동 수락 활성화(main=True, iframe=True)
+2025-12-23 14:33:18 - INFO - HTML 모드 본문 입력 시도!
+2025-12-23 14:33:38 - WARNING - HTML 본문이 기대 길이만큼 적용되지 않았습니다.
+2025-12-23 14:33:38 - ERROR - 티스토리 글쓰기 중 에러 발생: HTML 본문 검증 실패: 내용 불일치
+2025-12-23 14:33:38 - ERROR - 티스토리 블로그 업로드 실패
+2025-12-23 14:33:38 - INFO - 웹훅 전송 성공 (status=200)
+2025-12-23 14:40:51 - INFO - 네이버 블로그 업로드 시작
+2025-12-23 14:40:51 - INFO - 네이버 블로그 자동화 시작
+2025-12-23 14:40:51 - INFO - Chrome 드라이버 초기화 (headless=False)
+2025-12-23 14:40:53 - INFO - 네이버 로그인 시작
+2025-12-23 14:40:53 - INFO - 블로그 ID 추출: joo_0517
+2025-12-23 14:41:00 - INFO - 네이버 로그인 완료
+2025-12-23 14:41:00 - INFO - onlineviewer HTML 변환 시작
+2025-12-23 14:41:14 - INFO - 리치 HTML 클립보드 복사 완료
+2025-12-23 14:41:20 - ERROR - 네이버 글 작성 실패: Message: element click intercepted: Element <div draggable="false" class="se-section se-section-documentTitle se-l-default se-section-align-left">...</div> is not clickable at point (756, 252). Other element would receive the click: <div class="se-popup-dim se-popup-dim-white"></div>
+  (Session info: chrome=143.0.7499.170); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+0   chromedriver                        0x0000000100b48b2c cxxbridge1$str$ptr + 3033596
+1   chromedriver                        0x0000000100b40b30 cxxbridge1$str$ptr + 3000832
+2   chromedriver                        0x000000010063ab0c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74196
+3   chromedriver                        0x000000010068743c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 387844
+4   chromedriver                        0x0000000100685a1c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 381156
+5   chromedriver                        0x000000010068388c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 372564
+6   chromedriver                        0x0000000100682c9c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 369508
+7   chromedriver                        0x0000000100677ca4 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 324460
+8   chromedriver                        0x0000000100677748 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 323088
+9   chromedriver                        0x00000001006c2968 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 630832
+10  chromedriver                        0x000000010067616c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 317492
+11  chromedriver                        0x0000000100b0c098 cxxbridge1$str$ptr + 2785128
+12  chromedriver                        0x0000000100b0f804 cxxbridge1$str$ptr + 2799316
+13  chromedriver                        0x0000000100aec850 cxxbridge1$str$ptr + 2656032
+14  chromedriver                        0x0000000100b10074 cxxbridge1$str$ptr + 2801476
+15  chromedriver                        0x0000000100add1cc cxxbridge1$str$ptr + 2592924
+16  chromedriver                        0x0000000100b2fcb4 cxxbridge1$str$ptr + 2931588
+17  chromedriver                        0x0000000100b2fe34 cxxbridge1$str$ptr + 2931972
+18  chromedriver                        0x0000000100b40788 cxxbridge1$str$ptr + 2999896
+19  libsystem_pthread.dylib             0x000000019a0f3c0c _pthread_start + 136
+20  libsystem_pthread.dylib             0x000000019a0eeb80 thread_start + 8
+
+2025-12-23 14:41:20 - INFO - 디버깅용 HTML/스크린샷 저장 완료
+2025-12-23 14:41:20 - ERROR - 네이버 블로그 업로드 실패
+2025-12-23 14:41:20 - INFO - 웹훅 전송 성공 (status=200)
+2025-12-23 17:17:12 - INFO - 네이버 블로그 업로드 시작
+2025-12-23 17:17:12 - INFO - 네이버 블로그 자동화 시작
+2025-12-23 17:17:12 - INFO - Chrome 드라이버 초기화 (headless=False)
+2025-12-23 17:17:14 - INFO - 네이버 로그인 시작
+2025-12-23 17:17:14 - INFO - 블로그 ID 추출: joo_0517
+2025-12-23 17:17:21 - INFO - 네이버 로그인 완료
+2025-12-23 17:17:21 - INFO - onlineviewer HTML 변환 시작
+2025-12-23 17:17:33 - INFO - 리치 HTML 클립보드 복사 완료
+2025-12-23 17:17:38 - ERROR - 네이버 글 작성 실패: Message: element click intercepted: Element <div draggable="false" class="se-section se-section-documentTitle se-l-default se-section-align-left">...</div> is not clickable at point (590, 252). Other element would receive the click: <div class="se-popup-dim se-popup-dim-white"></div>
+  (Session info: chrome=143.0.7499.170); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+0   chromedriver                        0x0000000101234b2c cxxbridge1$str$ptr + 3033596
+1   chromedriver                        0x000000010122cb30 cxxbridge1$str$ptr + 3000832
+2   chromedriver                        0x0000000100d26b0c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74196
+3   chromedriver                        0x0000000100d7343c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 387844
+4   chromedriver                        0x0000000100d71a1c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 381156
+5   chromedriver                        0x0000000100d6f88c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 372564
+6   chromedriver                        0x0000000100d6ec9c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 369508
+7   chromedriver                        0x0000000100d63ca4 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 324460
+8   chromedriver                        0x0000000100d63748 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 323088
+9   chromedriver                        0x0000000100dae968 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 630832
+10  chromedriver                        0x0000000100d6216c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 317492
+11  chromedriver                        0x00000001011f8098 cxxbridge1$str$ptr + 2785128
+12  chromedriver                        0x00000001011fb804 cxxbridge1$str$ptr + 2799316
+13  chromedriver                        0x00000001011d8850 cxxbridge1$str$ptr + 2656032
+14  chromedriver                        0x00000001011fc074 cxxbridge1$str$ptr + 2801476
+15  chromedriver                        0x00000001011c91cc cxxbridge1$str$ptr + 2592924
+16  chromedriver                        0x000000010121bcb4 cxxbridge1$str$ptr + 2931588
+17  chromedriver                        0x000000010121be34 cxxbridge1$str$ptr + 2931972
+18  chromedriver                        0x000000010122c788 cxxbridge1$str$ptr + 2999896
+19  libsystem_pthread.dylib             0x000000019a0f3c0c _pthread_start + 136
+20  libsystem_pthread.dylib             0x000000019a0eeb80 thread_start + 8
+
+2025-12-23 17:17:38 - INFO - 디버깅용 HTML/스크린샷 저장 완료
+2025-12-23 17:17:38 - ERROR - 네이버 블로그 업로드 실패
+2025-12-23 17:17:38 - INFO - 웹훅 전송 성공 (status=200)
+2025-12-23 18:07:07 - INFO - 네이버 블로그 업로드 시작
+2025-12-23 18:07:07 - INFO - 네이버 블로그 자동화 시작
+2025-12-23 18:07:07 - INFO - Chrome 드라이버 초기화 (headless=False)
+2025-12-23 18:07:09 - INFO - 네이버 로그인 시작
+2025-12-23 18:07:09 - INFO - 블로그 ID 추출: joo_0517
+2025-12-23 18:07:17 - INFO - 네이버 로그인 완료
+2025-12-23 18:07:17 - INFO - onlineviewer HTML 변환 시작
+2025-12-23 18:07:28 - INFO - 리치 HTML 클립보드 복사 완료
+2025-12-23 18:07:33 - ERROR - 네이버 글 작성 실패: Message: element click intercepted: Element <div draggable="false" class="se-section se-section-documentTitle se-l-default se-section-align-left">...</div> is not clickable at point (590, 252). Other element would receive the click: <div class="se-popup-dim se-popup-dim-white"></div>
+  (Session info: chrome=143.0.7499.170); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+0   chromedriver                        0x0000000100d04b2c cxxbridge1$str$ptr + 3033596
+1   chromedriver                        0x0000000100cfcb30 cxxbridge1$str$ptr + 3000832
+2   chromedriver                        0x00000001007f6b0c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74196
+3   chromedriver                        0x000000010084343c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 387844
+4   chromedriver                        0x0000000100841a1c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 381156
+5   chromedriver                        0x000000010083f88c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 372564
+6   chromedriver                        0x000000010083ec9c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 369508
+7   chromedriver                        0x0000000100833ca4 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 324460
+8   chromedriver                        0x0000000100833748 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 323088
+9   chromedriver                        0x000000010087e968 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 630832
+10  chromedriver                        0x000000010083216c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 317492
+11  chromedriver                        0x0000000100cc8098 cxxbridge1$str$ptr + 2785128
+12  chromedriver                        0x0000000100ccb804 cxxbridge1$str$ptr + 2799316
+13  chromedriver                        0x0000000100ca8850 cxxbridge1$str$ptr + 2656032
+14  chromedriver                        0x0000000100ccc074 cxxbridge1$str$ptr + 2801476
+15  chromedriver                        0x0000000100c991cc cxxbridge1$str$ptr + 2592924
+16  chromedriver                        0x0000000100cebcb4 cxxbridge1$str$ptr + 2931588
+17  chromedriver                        0x0000000100cebe34 cxxbridge1$str$ptr + 2931972
+18  chromedriver                        0x0000000100cfc788 cxxbridge1$str$ptr + 2999896
+19  libsystem_pthread.dylib             0x000000019a0f3c0c _pthread_start + 136
+20  libsystem_pthread.dylib             0x000000019a0eeb80 thread_start + 8
+
+2025-12-23 18:07:33 - INFO - 디버깅용 HTML/스크린샷 저장 완료
+2025-12-23 18:07:33 - ERROR - 네이버 블로그 업로드 실패
+2025-12-23 18:07:33 - INFO - 웹훅 전송 성공 (status=200)
+2025-12-23 18:11:21 - INFO - 티스토리 블로그 업로드 시작
+2025-12-23 18:11:21 - INFO - 티스토리 블로그 자동화 시작
+2025-12-23 18:11:21 - INFO - Chrome 드라이버 초기화 (headless=False)
+2025-12-23 18:11:22 - INFO - 티스토리(카카오) 로그인 시작
+2025-12-23 18:11:38 - INFO - 티스토리 글쓰기 페이지 이동: https://story13923.tistory.com/manage/newpost/
+2025-12-23 18:11:42 - INFO - [ALERT DETECTED] 2025. 12. 23. 14:33에 저장된 글이 있습니다.
+이어서 작성하시겠습니까?
+2025-12-23 18:11:44 - INFO - 편집기 confirm 자동 수락 활성화(main=True, iframe=True)
+2025-12-23 18:11:45 - INFO - 편집기 confirm 자동 수락 활성화(main=True, iframe=True)
+2025-12-23 18:11:45 - INFO - 편집기 confirm 자동 수락 활성화(main=True, iframe=True)
+2025-12-23 18:11:58 - INFO - HTML 모드 본문 입력 시도!
+2025-12-23 18:12:18 - WARNING - HTML 본문이 기대 길이만큼 적용되지 않았습니다.
+2025-12-23 18:12:18 - ERROR - 티스토리 글쓰기 중 에러 발생: HTML 본문 검증 실패: 내용 불일치
+2025-12-23 18:12:18 - ERROR - 티스토리 블로그 업로드 실패
+2025-12-23 18:12:18 - INFO - 웹훅 전송 성공 (status=200)
+2025-12-23 18:22:17 - INFO - 티스토리 블로그 업로드 시작
+2025-12-23 18:22:17 - INFO - 티스토리 블로그 자동화 시작
+2025-12-23 18:22:17 - INFO - Chrome 드라이버 초기화 (headless=False)
+2025-12-23 18:22:19 - INFO - 티스토리(카카오) 로그인 시작
+2025-12-23 18:22:34 - INFO - 티스토리 글쓰기 페이지 이동: https://story13923.tistory.com/manage/newpost/
+2025-12-23 18:22:38 - INFO - [ALERT DETECTED] 2025. 12. 23. 18:12에 저장된 글이 있습니다.
+이어서 작성하시겠습니까?
+2025-12-23 18:22:39 - INFO - 편집기 confirm 자동 수락 활성화(main=True, iframe=True)
+2025-12-23 18:22:41 - INFO - 편집기 confirm 자동 수락 활성화(main=True, iframe=True)
+2025-12-23 18:22:41 - INFO - 편집기 confirm 자동 수락 활성화(main=True, iframe=True)
+2025-12-23 18:22:53 - INFO - HTML 모드 본문 입력 시도!
+2025-12-23 18:23:14 - WARNING - HTML 본문이 기대 길이만큼 적용되지 않았습니다.
+2025-12-23 18:23:14 - ERROR - 티스토리 글쓰기 중 에러 발생: HTML 본문 검증 실패: 내용 불일치
+2025-12-23 18:23:14 - ERROR - 티스토리 블로그 업로드 실패
+2025-12-23 18:23:14 - INFO - 웹훅 전송 성공 (status=200)
+2025-12-23 18:37:09 - INFO - 티스토리 블로그 업로드 시작
+2025-12-23 18:37:09 - INFO - 티스토리 블로그 자동화 시작
+2025-12-23 18:37:09 - INFO - Chrome 드라이버 초기화 (headless=False)
+2025-12-23 18:37:10 - INFO - 티스토리(카카오) 로그인 시작
+2025-12-23 18:37:27 - INFO - 티스토리 글쓰기 페이지 이동: https://story13923.tistory.com/manage/newpost/
+2025-12-23 18:37:30 - INFO - [ALERT DETECTED] 2025. 12. 23. 18:22에 저장된 글이 있습니다.
+이어서 작성하시겠습니까?
+2025-12-23 18:37:32 - INFO - 편집기 confirm 자동 수락 활성화(main=True, iframe=True)
+2025-12-23 18:37:34 - INFO - 편집기 confirm 자동 수락 활성화(main=True, iframe=True)
+2025-12-23 18:37:34 - INFO - 편집기 confirm 자동 수락 활성화(main=True, iframe=True)
+2025-12-23 18:37:46 - INFO - HTML 모드 본문 입력 시도!
+2025-12-23 18:37:51 - INFO - 클립보드 복사 성공 확인
+2025-12-23 18:37:51 - INFO - Mac OS 감지 - Command+V 사용
+2025-12-23 18:37:53 - INFO - HTML 모드 본문 입력 완료 !!
+2025-12-23 18:37:54 - INFO - 테스트 모드 - 티스토리 발행 단계 생략
+2025-12-23 18:37:54 - INFO - 티스토리 블로그 업로드 완료
+2025-12-23 18:37:54 - INFO - 웹훅 전송 성공 (status=200)
+2025-12-23 18:54:23 - INFO - 티스토리 블로그 업로드 시작
+2025-12-23 18:54:23 - INFO - 티스토리 블로그 자동화 시작
+2025-12-23 18:54:23 - INFO - Chrome 드라이버 초기화 (headless=False)
+2025-12-23 18:54:25 - INFO - 티스토리(카카오) 로그인 시작
+2025-12-23 18:54:42 - INFO - 티스토리 글쓰기 페이지 이동: https://story13923.tistory.com/manage/newpost/
+2025-12-23 18:54:46 - INFO - [ALERT DETECTED] 2025. 12. 23. 18:37에 저장된 글이 있습니다.
+이어서 작성하시겠습니까?
+2025-12-23 18:54:48 - INFO - 편집기 confirm 자동 수락 활성화(main=True, iframe=True)
+2025-12-23 18:54:49 - INFO - 편집기 confirm 자동 수락 활성화(main=True, iframe=True)
+2025-12-23 18:54:50 - INFO - 편집기 confirm 자동 수락 활성화(main=True, iframe=True)
+2025-12-23 18:55:03 - INFO - HTML 모드 본문 입력 시도!
+2025-12-23 18:55:08 - INFO - 클립보드 복사 성공 확인
+2025-12-23 18:55:08 - INFO - Mac OS 감지 - Command+V 사용
+2025-12-23 18:55:09 - INFO - HTML 모드 본문 입력 완료 !!
+2025-12-23 18:55:10 - INFO - 테스트 모드 - 티스토리 발행 단계 생략
+2025-12-23 18:55:10 - INFO - 티스토리 블로그 업로드 완료
+2025-12-23 18:55:10 - INFO - 웹훅 전송 성공 (status=200)
+2025-12-25 09:00:23 - INFO - 티스토리 블로그 업로드 시작
+2025-12-25 09:00:23 - INFO - 티스토리 블로그 자동화 시작
+2025-12-25 09:00:23 - INFO - Chrome 드라이버 초기화 (headless=False)
+2025-12-25 09:00:27 - INFO - 티스토리(카카오) 로그인 시작
+2025-12-25 09:03:42 - INFO - 티스토리 글쓰기 페이지 이동: https://story13923.tistory.com/manage/newpost/
+2025-12-25 09:10:26 - INFO - [ALERT DETECTED] 2025. 12. 23. 18:55에 저장된 글이 있습니다.
+이어서 작성하시겠습니까?
+2025-12-25 09:10:28 - INFO - 편집기 confirm 자동 수락 활성화(main=True, iframe=True)
+2025-12-25 09:10:30 - INFO - 편집기 confirm 자동 수락 활성화(main=True, iframe=True)
+2025-12-25 09:10:30 - INFO - 편집기 confirm 자동 수락 활성화(main=True, iframe=True)
+2025-12-25 09:13:42 - INFO - HTML 모드 본문 입력 시도!
+2025-12-25 09:15:22 - INFO - 클립보드 복사 성공 확인
+2025-12-25 09:15:22 - INFO - Mac OS 감지 - Command+V 사용
+2025-12-25 09:15:23 - INFO - HTML 모드 본문 입력 완료 !!
+2025-12-25 09:17:10 - ERROR - 공개 라디오 버튼(#open20)을 찾을 수 없음
+2025-12-25 09:17:12 - ERROR - 티스토리 글쓰기 중 에러 발생: Message: 
+
+2025-12-25 09:17:12 - ERROR - 티스토리 블로그 업로드 실패
+2025-12-25 09:17:13 - INFO - 웹훅 전송 성공 (status=200)
+2025-12-25 09:17:18 - INFO - 티스토리 블로그 업로드 시작
+2025-12-25 09:17:18 - INFO - 티스토리 블로그 자동화 시작
+2025-12-25 09:17:18 - INFO - Chrome 드라이버 초기화 (headless=False)
+2025-12-25 09:17:19 - INFO - 티스토리(카카오) 로그인 시작
+2025-12-25 09:35:28 - ERROR - 티스토리 블로그 업로드 중 알 수 없는 오류 발생
+Traceback (most recent call last):
+  File "/Users/user/Documents/OCP/Backend/blog_upload_module/venv/lib/python3.13/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/Users/user/Documents/OCP/Backend/blog_upload_module/venv/lib/python3.13/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "/opt/anaconda3/lib/python3.13/http/client.py", line 1430, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "/opt/anaconda3/lib/python3.13/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "/opt/anaconda3/lib/python3.13/http/client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/user/Documents/OCP/Backend/blog_upload_module/src/blog_upload_module/tistory_uploader.py", line 1161, in upload_to_tistory_blog
+    bot.login()
+    ~~~~~~~~~^^
+  File "/Users/user/Documents/OCP/Backend/blog_upload_module/src/blog_upload_module/tistory_uploader.py", line 95, in login
+    self.driver.get("https://www.tistory.com/auth/login")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/user/Documents/OCP/Backend/blog_upload_module/venv/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py", line 452, in get
+    self.execute(Command.GET, {"url": url})
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/user/Documents/OCP/Backend/blog_upload_module/venv/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+    response = cast(RemoteConnection, self.command_executor).execute(driver_command, params)
+  File "/Users/user/Documents/OCP/Backend/blog_upload_module/venv/lib/python3.13/site-packages/selenium/webdriver/remote/remote_connection.py", line 405, in execute
+    return self._request(command_info[0], url, body=data)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/user/Documents/OCP/Backend/blog_upload_module/venv/lib/python3.13/site-packages/selenium/webdriver/remote/remote_connection.py", line 429, in _request
+    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+  File "/Users/user/Documents/OCP/Backend/blog_upload_module/venv/lib/python3.13/site-packages/urllib3/_request_methods.py", line 143, in request
+    return self.request_encode_body(
+           ~~~~~~~~~~~~~~~~~~~~~~~~^
+        method, url, fields=fields, headers=headers, **urlopen_kw
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/user/Documents/OCP/Backend/blog_upload_module/venv/lib/python3.13/site-packages/urllib3/_request_methods.py", line 278, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/user/Documents/OCP/Backend/blog_upload_module/venv/lib/python3.13/site-packages/urllib3/poolmanager.py", line 457, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/Users/user/Documents/OCP/Backend/blog_upload_module/venv/lib/python3.13/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "/Users/user/Documents/OCP/Backend/blog_upload_module/venv/lib/python3.13/site-packages/urllib3/util/retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/user/Documents/OCP/Backend/blog_upload_module/venv/lib/python3.13/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/Users/user/Documents/OCP/Backend/blog_upload_module/venv/lib/python3.13/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "/Users/user/Documents/OCP/Backend/blog_upload_module/venv/lib/python3.13/site-packages/urllib3/connectionpool.py", line 536, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/user/Documents/OCP/Backend/blog_upload_module/venv/lib/python3.13/site-packages/urllib3/connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+        self, url, f"Read timed out. (read timeout={timeout_value})"
+    ) from err
+urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=52051): Read timed out. (read timeout=120)
+2025-12-25 10:00:30 - INFO - 웹훅 전송 성공 (status=200)
+2025-12-25 10:00:35 - INFO - 티스토리 블로그 업로드 시작
+2025-12-25 10:00:35 - INFO - 티스토리 블로그 자동화 시작
+2025-12-25 10:00:35 - INFO - Chrome 드라이버 초기화 (headless=False)
+2025-12-25 10:00:36 - INFO - 티스토리(카카오) 로그인 시작
+2025-12-25 10:18:54 - ERROR - 티스토리 블로그 업로드 중 알 수 없는 오류 발생
+Traceback (most recent call last):
+  File "/Users/user/Documents/OCP/Backend/blog_upload_module/venv/lib/python3.13/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/Users/user/Documents/OCP/Backend/blog_upload_module/venv/lib/python3.13/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "/opt/anaconda3/lib/python3.13/http/client.py", line 1430, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "/opt/anaconda3/lib/python3.13/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "/opt/anaconda3/lib/python3.13/http/client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/user/Documents/OCP/Backend/blog_upload_module/src/blog_upload_module/tistory_uploader.py", line 1161, in upload_to_tistory_blog
+    bot.login()
+    ~~~~~~~~~^^
+  File "/Users/user/Documents/OCP/Backend/blog_upload_module/src/blog_upload_module/tistory_uploader.py", line 95, in login
+    self.driver.get("https://www.tistory.com/auth/login")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/user/Documents/OCP/Backend/blog_upload_module/venv/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py", line 452, in get
+    self.execute(Command.GET, {"url": url})
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/user/Documents/OCP/Backend/blog_upload_module/venv/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+    response = cast(RemoteConnection, self.command_executor).execute(driver_command, params)
+  File "/Users/user/Documents/OCP/Backend/blog_upload_module/venv/lib/python3.13/site-packages/selenium/webdriver/remote/remote_connection.py", line 405, in execute
+    return self._request(command_info[0], url, body=data)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/user/Documents/OCP/Backend/blog_upload_module/venv/lib/python3.13/site-packages/selenium/webdriver/remote/remote_connection.py", line 429, in _request
+    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+  File "/Users/user/Documents/OCP/Backend/blog_upload_module/venv/lib/python3.13/site-packages/urllib3/_request_methods.py", line 143, in request
+    return self.request_encode_body(
+           ~~~~~~~~~~~~~~~~~~~~~~~~^
+        method, url, fields=fields, headers=headers, **urlopen_kw
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/user/Documents/OCP/Backend/blog_upload_module/venv/lib/python3.13/site-packages/urllib3/_request_methods.py", line 278, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/user/Documents/OCP/Backend/blog_upload_module/venv/lib/python3.13/site-packages/urllib3/poolmanager.py", line 457, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/Users/user/Documents/OCP/Backend/blog_upload_module/venv/lib/python3.13/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "/Users/user/Documents/OCP/Backend/blog_upload_module/venv/lib/python3.13/site-packages/urllib3/util/retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/user/Documents/OCP/Backend/blog_upload_module/venv/lib/python3.13/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/Users/user/Documents/OCP/Backend/blog_upload_module/venv/lib/python3.13/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "/Users/user/Documents/OCP/Backend/blog_upload_module/venv/lib/python3.13/site-packages/urllib3/connectionpool.py", line 536, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/user/Documents/OCP/Backend/blog_upload_module/venv/lib/python3.13/site-packages/urllib3/connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+        self, url, f"Read timed out. (read timeout={timeout_value})"
+    ) from err
+urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=52166): Read timed out. (read timeout=120)
+2025-12-25 10:47:08 - INFO - 웹훅 전송 성공 (status=200)
+2025-12-25 10:47:13 - INFO - 티스토리 블로그 업로드 시작
+2025-12-25 10:47:13 - INFO - 티스토리 블로그 자동화 시작
+2025-12-25 10:47:13 - INFO - Chrome 드라이버 초기화 (headless=False)
+2025-12-25 10:47:16 - INFO - 티스토리(카카오) 로그인 시작
+2025-12-25 10:50:31 - INFO - 티스토리 글쓰기 페이지 이동: https://story13923.tistory.com/manage/newpost/
+2025-12-25 10:53:52 - INFO - 편집기 confirm 자동 수락 활성화(main=True, iframe=False)
+2025-12-25 10:55:33 - ERROR - 티스토리 글쓰기 중 에러 발생: Message: 티스토리 에디터의 제목 입력 칸(#post-title-inp)을 찾지 못했습니다.
+
+2025-12-25 10:55:33 - ERROR - 티스토리 블로그 업로드 실패
+2025-12-25 10:55:33 - INFO - 웹훅 전송 성공 (status=200)

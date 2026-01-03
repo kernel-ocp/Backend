@@ -17,6 +17,7 @@ import java.util.List;
 public class TrendCategory extends BaseEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "trend_category_id")
     private Long id;
 
