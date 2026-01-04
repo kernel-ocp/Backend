@@ -169,6 +169,6 @@ class AdminWorkServiceImplNPlusOneTest {
         }
         System.out.println("====================================\n");
 
-        assertThat(response.getWorks()).hasSameClassAs(10);
+        assertThat(response.getWorks().size()).isEqualTo(10);
     }
 }
