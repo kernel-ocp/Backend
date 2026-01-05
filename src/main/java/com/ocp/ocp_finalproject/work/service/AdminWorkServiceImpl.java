@@ -8,6 +8,7 @@ import com.ocp.ocp_finalproject.user.domain.UserPrincipal;
 import com.ocp.ocp_finalproject.user.enums.UserRole;
 import com.ocp.ocp_finalproject.user.repository.UserRepository;
 import com.ocp.ocp_finalproject.work.domain.Work;
+import com.ocp.ocp_finalproject.work.dto.projection.AdminWorkListProjection;
 import com.ocp.ocp_finalproject.work.dto.response.AdminWorkListResponse;
 import com.ocp.ocp_finalproject.work.dto.response.AdminWorkPageResponse;
 import com.ocp.ocp_finalproject.work.repository.WorkRepository;
@@ -76,6 +77,59 @@ public class AdminWorkServiceImpl implements AdminWorkService {
                         .choiceProduct(work.getAiContent().getChoiceProduct())
                         .choiceTrendKeyword(work.getAiContent().getChoiceTrendKeyword())
                         .failureReason(work.getFailureReason())
+                        .build())
+                .collect(Collectors.toList());
+
+        return AdminWorkPageResponse.builder()
+                .works(responses)
+                .page(workPage.getNumber())
+                .size(workPage.getSize())
+                .totalElements(workPage.getTotalElements())
+                .totalPages(workPage.getTotalPages())
+                .last(workPage.isLast())
+                .build();
+    }
+
+    @Transactional(readOnly = true)
+    public AdminWorkPageResponse getWorksForAdminOptimized(UserPrincipal principal, Long workflowId, int page) {
+        if (page < 0) {
+            throw new CustomException(INVALID_INPUT_VALUE, "페이지 번호는 0 이상의 정수여야 합니다.");
+        }
+
+        validateAndGetUser(principal);
+
+        PageRequest pageable = PageRequest.of(page, DEFAULT_PAGE_SIZE, Sort.by(Sort.Direction.DESC, "createdAt"));
+
+        // 변경: Page<AdminWorkListProjection> 사용
+        Page<AdminWorkListProjection> workPage;
+
+        if (workflowId != null) {
+            workflowRepository.findById(workflowId)
+                    .orElseThrow(() -> new CustomException(WORKFLOW_NOT_FOUND));
+
+            // Optimized 메서드 호출
+            workPage = workRepository.findByWorkflowIdForAdminOptimized(workflowId, pageable);
+        } else {
+            // Optimized 메서드 호출
+            workPage = workRepository.findAllForAdminOptimized(pageable);
+        }
+
+        List<AdminWorkListProjection> projections = workPage.getContent();
+
+        // Projection → Response DTO 변환
+        List<AdminWorkListResponse> responses = projections.stream()
+                .map(proj -> AdminWorkListResponse.builder()
+                        .workId(proj.workId())
+                        .workflowId(proj.workflowId())
+                        .userId(proj.userId())
+                        .status(proj.status())
+                        .postingUrl(proj.postingUrl())
+                        .completedAt(proj.completedAt())
+                        .title(proj.title())
+                        .content(proj.contentSummary())  // null
+                        .choiceProduct(proj.choiceProduct())
+                        .choiceTrendKeyword(proj.choiceTrendKeyword())
+                        .failureReason(proj.failureReason())
                         .build())
                 .collect(Collectors.toList());
 

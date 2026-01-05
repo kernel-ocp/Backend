@@ -101,7 +101,7 @@ class AdminWorkServiceImplNPlusOneTest {
         // given
         UserPrincipal adminPrincipal = testHelper.createAdminPrincipal();
         int page = 0;
-        StopWatch stopWatch = new StopWatch("AdminWorkService Performace Test");
+        StopWatch stopWatch = new StopWatch("AdminWorkService Performance Test");
 
         entityManager.clear();
 
