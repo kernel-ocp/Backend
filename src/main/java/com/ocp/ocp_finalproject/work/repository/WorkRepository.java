@@ -1,6 +1,7 @@
 package com.ocp.ocp_finalproject.work.repository;
 
 import com.ocp.ocp_finalproject.work.domain.Work;
+import com.ocp.ocp_finalproject.work.dto.projection.AdminWorkListProjection;
 import com.ocp.ocp_finalproject.work.dto.response.WorkResponse;
 import com.ocp.ocp_finalproject.work.enums.WorkExecutionStatus;
 import java.util.List;
@@ -47,6 +48,31 @@ public interface WorkRepository extends JpaRepository<Work, Long> {
     Page<Work> findByWorkflowIdForAdmin(Long workflowId, Pageable pageable);
 
     @Query("""
+        select new com.ocp.ocp_finalproject.work.dto.projection.AdminWorkListProjection(
+            w.id,
+            wf.id,
+            u.id,
+            w.status,
+            w.postingUrl,
+            w.completedAt,
+            ac.title,
+            CAST(NULL AS string),
+            ac.choiceProduct,
+            ac.choiceTrendKeyword,
+            w.failureReason
+        )
+        FROM Work w 
+        JOIN w.workflow wf
+        LEFT JOIN  wf.user u
+        JOIN w.aiContent ac
+        WHERE wf.id = :workflowId
+    """)
+    Page<AdminWorkListProjection> findByWorkflowIdForAdminOptimized(
+            @Param("workflowId") Long workflowId,
+            Pageable pageable
+    );
+
+    @Query("""
         SELECT new com.ocp.ocp_finalproject.work.dto.response.WorkResponse(
             w.id,
             w.postingUrl,
@@ -72,6 +98,27 @@ public interface WorkRepository extends JpaRepository<Work, Long> {
         JOIN FETCH w.aiContent ac
     """)
     Page<Work> findAllForAdmin(Pageable pageable);
+
+    @Query("""
+     SELECT new com.ocp.ocp_finalproject.work.dto.projection.AdminWorkListProjection(
+         w.id,
+         wf.id,
+         u.id,
+         w.status,
+         w.postingUrl,
+         w.completedAt,
+         ac.title,
+         CAST(NULL AS string),
+         ac.choiceProduct,
+         ac.choiceTrendKeyword,
+         w.failureReason
+     )
+     FROM Work w
+     JOIN w.workflow wf
+     LEFT JOIN wf.user u
+     JOIN w.aiContent ac
+ """)
+    Page<AdminWorkListProjection> findAllForAdminOptimized(Pageable pageable);
 
     Optional<Work> findTopByWorkflowIdOrderByCreatedAtDesc(Long workflowId);
 
