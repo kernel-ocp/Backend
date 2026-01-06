@@ -159,6 +159,7 @@ class AdminWorkServiceImplProjectionTest {
 
         // Payload 크기 측정 (직렬화)
         com.fasterxml.jackson.databind.ObjectMapper objectMapper = new com.fasterxml.jackson.databind.ObjectMapper();
+        objectMapper.findAndRegisterModules();
         byte[] jsonBytes = objectMapper.writeValueAsBytes(response.getWorks());
         long payloadSize = jsonBytes.length;
 
@@ -215,55 +216,4 @@ class AdminWorkServiceImplProjectionTest {
         assertThat(response.getWorks().size()).isEqualTo(10);
     }
 
-    @Test
-    @DisplayName("[비교] 개선 전후 성능 지표 출력")
-    void printComparisonMetrics() {
-        System.out.println("\n");
-        System.out.println("=".repeat(80));
-        System.out.println("AdminWorkService Projection 최적화 - 성능 개선 지표");
-        System.out.println("=".repeat(80));
-        System.out.println();
-
-        System.out.println("## 테스트 방법");
-        System.out.println("1. AdminWorkServiceImplNPlusOneTest 실행 → 개선 전 지표 기록");
-        System.out.println("2. AdminWorkServiceImplProjectionTest 실행 → 개선 후 지표 기록");
-        System.out.println("3. 아래 표에 실제 측정값 기입");
-        System.out.println();
-
-        System.out.println("## 예상 성능 개선");
-        System.out.println("┌─────────────────────┬─────────────┬─────────────┬──────────────┐");
-        System.out.println("│ 지표                │ 개선 전      │ 개선 후      │ 개선율       │");
-        System.out.println("├─────────────────────┼─────────────┼─────────────┼──────────────┤");
-        System.out.println("│ SELECT 컬럼 수      │ 40개         │ 11개         │ 72.5% 감소   │");
-        System.out.println("│ 쿼리 실행 수        │ ___회        │ ___회        │ ___% 감소    │");
-        System.out.println("│ 평균 응답 시간      │ ___ms        │ ___ms        │ ___% 단축    │");
-        System.out.println("│ Payload 크기        │ ___KB        │ ___KB        │ ___% 감소    │");
-        System.out.println("│ 엔티티 로드 수      │ ___개        │ ___개        │ ___% 감소    │");
-        System.out.println("└─────────────────────┴─────────────┴─────────────┴──────────────┘");
-        System.out.println();
-
-        System.out.println("## 이력서 작성 예시");
-        System.out.println("[JPA Projection 최적화를 통한 관리자 API 성능 개선]");
-        System.out.println();
-        System.out.println("• 배경: AdminWorkService에서 40개 컬럼 로드 중 11개만 사용 (72.5% 낭비)");
-        System.out.println("• 문제: AiContent.content(LONGTEXT) 전체 로드로 네트워크/메모리 낭비");
-        System.out.println();
-        System.out.println("• 해결 방안:");
-        System.out.println("  - Constructor-based Projection 도입");
-        System.out.println("  - JPQL 쿼리 최적화 (JOIN FETCH → JOIN)");
-        System.out.println("  - LONGTEXT 컬럼 제외 전략");
-        System.out.println();
-        System.out.println("• 성능 개선 결과:");
-        System.out.println("  ✓ SELECT 컬럼: 40개 → 11개 (72.5% 감소)");
-        System.out.println("  ✓ 응답 시간: __ms → __ms (__% 단축)");
-        System.out.println("  ✓ Payload 크기: __KB → __KB (__% 감소)");
-        System.out.println();
-        System.out.println("• 비즈니스 임팩트:");
-        System.out.println("  - 관리자 대시보드 로딩 속도 개선");
-        System.out.println("  - 네트워크 트래픽 감소 → 인프라 비용 절감");
-        System.out.println("  - DB 부하 감소 → 동시 처리 용량 증가");
-        System.out.println();
-        System.out.println("=".repeat(80));
-        System.out.println();
-    }
 }

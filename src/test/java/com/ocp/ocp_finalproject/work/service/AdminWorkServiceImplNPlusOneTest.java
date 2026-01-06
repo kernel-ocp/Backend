@@ -97,7 +97,7 @@ class AdminWorkServiceImplNPlusOneTest {
 
     @Test
     @DisplayName("[개선 전] getWorksForAdmin - 응답시간 측정")
-    void testResponseTime_BeforOptimization() {
+    void testResponseTime_BeforeOptimization() {
         // given
         UserPrincipal adminPrincipal = testHelper.createAdminPrincipal();
         int page = 0;
@@ -170,5 +170,38 @@ class AdminWorkServiceImplNPlusOneTest {
         System.out.println("====================================\n");
 
         assertThat(response.getWorks().size()).isEqualTo(10);
+    }
+
+    @Test
+    @DisplayName("[개선 전] Payload 크기 측정 - 메모리 사용량 비교")
+    void testPayloadSize_BeforeOptimization() throws Exception {
+        // given
+        UserPrincipal adminPrincipal = testHelper.createAdminPrincipal();
+
+        entityManager.clear();
+
+        // when
+        AdminWorkPageResponse response = adminWorkService.getWorksForAdmin(
+                adminPrincipal,
+                testWorkflowId,
+                0
+        );
+
+        // Payload 크기 측정 (JSON 직렬화 - 실제 API 응답과 동일한 방식)
+        com.fasterxml.jackson.databind.ObjectMapper objectMapper = new com.fasterxml.jackson.databind.ObjectMapper();
+        objectMapper.findAndRegisterModules();
+        byte[] jsonBytes = objectMapper.writeValueAsBytes(response.getWorks());
+        long payloadSize = jsonBytes.length;
+
+        // then
+        System.out.println("\n========== [개선 전] Payload 크기 ==========");
+        System.out.println("JSON 응답 크기: " + payloadSize + " bytes");
+        System.out.println("JSON 응답 크기: " + String.format("%.2f", payloadSize / 1024.0) + " KB");
+        System.out.println("Work 개수: " + response.getWorks().size());
+        System.out.println("Work당 평균 크기: " + (payloadSize / response.getWorks().size()) + " bytes");
+        System.out.println("===========================================\n");
+
+        // content(LONGTEXT) 포함으로 크기가 클 것으로 예상
+        System.out.println("※ 개선 후 테스트와 비교하여 감소율 확인");
     }
 }
