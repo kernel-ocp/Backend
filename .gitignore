@@ -56,3 +56,9 @@ env/
 # Airflow
 airflow/logs/
 blog_upload_module/logs/
+
+# Gradle wrapper
+gradlew
+
+# CSV files
+*.csv
