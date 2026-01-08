@@ -44,30 +44,6 @@ public interface AiContentRepository extends JpaRepository<AiContent, Long> {
     // 포스팅 통계 조회 쿼리
 
     /*
-     * 일별 발행된 포스팅 수 조회 (날짜-시간 범위)
-     *
-     * 성능 최적화: LocalDateTime 범위 비교를 사용하여 인덱스 활용 가능 (SARGable)
-     * DATE(), YEAR(), MONTH() 같은 함수를 WHERE 절에서 사용하지 않음
-     *
-     * @param startDateTime 시작 날짜-시간 (포함)
-     * @param endDateTime 종료 날짜-시간 (미포함)
-     * @return [LocalDate statDate, Long postCount] 형식의 Object[] 리스트
-     */
-    @Query("""
-        SELECT DATE(ac.completedAt) as statDate, COUNT(ac) as postCount
-        FROM AiContent ac
-        WHERE ac.status = 'PUBLISHED'
-            AND ac.completedAt >= :startDateTime
-            AND ac.completedAt < :endDateTime
-        GROUP BY DATE(ac.completedAt)
-        ORDER BY DATE(ac.completedAt) ASC
-    """)
-    List<Object[]> countPublishedPostsByDateRange(
-            @Param("startDateTime") LocalDateTime startDateTime,
-            @Param("endDateTime") LocalDateTime endDateTime
-    );
-
-    /*
      * 특정 기간 동안 특정 상태의 콘텐츠 수 조회
      *
      * @param status 조회할 콘텐츠 상태

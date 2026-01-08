@@ -31,14 +31,6 @@ public class UserService {
     }
 
     /**
-     * email로 조회
-     */
-    @Transactional(readOnly = true)
-    public User getUserByEmail(String email) {
-        return userRepository.findByEmail(email).orElseThrow(()-> new IllegalArgumentException("사용자를 찾을 수 없습니다. email: " + email));
-    }
-
-    /**
      * 사용자 상태 변경
      */
     @Transactional
@@ -56,14 +48,6 @@ public class UserService {
     public void deactivateUser(Long userId) {
         updateUserStatus(userId, UserStatus.INACTIVE);
         log.info("사용자 비활성화 - userId: {}", userId);
-    }
-
-    /**
-     * 사용자 활성 상태로 변경 ( 로그인 시 사용 )
-     */
-    @Transactional
-    public void activateUser(Long userId) {
-        updateUserStatus(userId, UserStatus.ACTIVE);
     }
 
     /**

@@ -43,12 +43,6 @@ public class TrendCategory extends BaseEntity {
         return trendCategory;
     }
 
-    public void updateInfo(String trendCategoryName, Integer depth, TrendCategory parentCategory) {
-        this.trendCategoryName = trendCategoryName;
-        this.depth = depth;
-        this.parentCategory = parentCategory;
-    }
-
     public List<TrendCategory> getFullPath() {
         List<TrendCategory> path = new ArrayList<>();
         TrendCategory current = this;
