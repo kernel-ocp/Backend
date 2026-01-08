@@ -40,13 +40,4 @@ public class UserBlog extends BaseEntity {
         return userBlog;
     }
 
-    public void updateCredentials(String accountId, String accountPassword) {
-        this.accountId = accountId;
-        this.accountPassword = accountPassword;
-    }
-
-    public void updateBlogUrl(String blogUrl) {
-        this.blogUrl = blogUrl;
-    }
-
 }

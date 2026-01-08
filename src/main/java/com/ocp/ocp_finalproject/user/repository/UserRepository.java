@@ -15,31 +15,6 @@ import java.util.Optional;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
-    /**
-     * 이메일로 사용자 조회
-     * OAuth 로그인 시 기존 회원 확인용
-     */
-    Optional<User> findByEmail(String email);
-
-    /*
-    * 이름으로 검색 (부분 일치)
-    * */
-     Page<User> findByNameContaining(String name, Pageable pageable);
-
-     /*
-     * 이메일로 검색 (부분 일치)
-     * */
-     Page<User> findByEmailContaining(String email, Pageable pageable);
-
-     /*
-     * 상태별 사용자 조회
-     * */
-    Page<User> findByStatus(UserStatus status, Pageable pageable);
-
-    /*
-    * 권한별 사용자 조회
-    * */
-    Page<User> findByRole(UserRole role, Pageable pageable);
 
     /*
     * 복합 검색 (이름, 이메일, 상태, 권한)
